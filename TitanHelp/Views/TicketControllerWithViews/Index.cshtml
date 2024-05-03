@@ -1,3 +1,5 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using TitanHelp.Controllers
 @model IEnumerable<TitanHelp.Models.Ticket>
 
 @{
@@ -52,3 +54,21 @@
 }
     </tbody>
 </table>
+<!-- author: Luke Kelley -->
+@if (Model is PaginatedList<Ticket> paginatedList)
+{
+    @if (paginatedList.HasPreviousPage)
+    {
+        <a href="?pageNumber=@paginatedList.PreviousPageNumber">Previous</a>
+    }
+
+    @for (int i = 1; i <= paginatedList.TotalPages; i++)
+    {
+        <a href="?pageNumber=@i">@i</a>
+    }
+
+    @if (paginatedList.HasNextPage)
+    {
+        <a href="?pageNumber=@paginatedList.NextPageNumber">Next</a>
+    }
+}

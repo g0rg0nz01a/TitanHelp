@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lthom\\source\\repos\\TitanHelp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19D151FA-0653-432B-83F9-D440AB3D3841}|TitanHelp\\TitanHelp.csproj|c:\\users\\lthom\\source\\repos\\titanhelp\\titanhelp\\models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D151FA-0653-432B-83F9-D440AB3D3841}|TitanHelp\\TitanHelp.csproj|solutionrelative:titanhelp\\models\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D151FA-0653-432B-83F9-D440AB3D3841}|TitanHelp\\TitanHelp.csproj|c:\\users\\lthom\\source\\repos\\titanhelp\\titanhelp\\views\\ticketcontrollerwithviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D151FA-0653-432B-83F9-D440AB3D3841}|TitanHelp\\TitanHelp.csproj|solutionrelative:titanhelp\\views\\ticketcontrollerwithviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D151FA-0653-432B-83F9-D440AB3D3841}|TitanHelp\\TitanHelp.csproj|c:\\users\\lthom\\source\\repos\\titanhelp\\titanhelp\\controllers\\ticketcontrollerwithviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D151FA-0653-432B-83F9-D440AB3D3841}|TitanHelp\\TitanHelp.csproj|solutionrelative:titanhelp\\controllers\\ticketcontrollerwithviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lthom\\source\\repos\\TitanHelp\\TitanHelp\\Views\\TicketControllerWithViews\\Index.cshtml",
+              "RelativeDocumentMoniker": "TitanHelp\\Views\\TicketControllerWithViews\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lthom\\source\\repos\\TitanHelp\\TitanHelp\\Views\\TicketControllerWithViews\\Index.cshtml",
+              "RelativeToolTip": "TitanHelp\\Views\\TicketControllerWithViews\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T16:10:09.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaginatedList.cs",
+              "DocumentMoniker": "C:\\Users\\lthom\\source\\repos\\TitanHelp\\TitanHelp\\Models\\PaginatedList.cs",
+              "RelativeDocumentMoniker": "TitanHelp\\Models\\PaginatedList.cs",
+              "ToolTip": "C:\\Users\\lthom\\source\\repos\\TitanHelp\\TitanHelp\\Models\\PaginatedList.cs",
+              "RelativeToolTip": "TitanHelp\\Models\\PaginatedList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T16:09:42.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TicketControllerWithViews.cs",
+              "DocumentMoniker": "C:\\Users\\lthom\\source\\repos\\TitanHelp\\TitanHelp\\Controllers\\TicketControllerWithViews.cs",
+              "RelativeDocumentMoniker": "TitanHelp\\Controllers\\TicketControllerWithViews.cs",
+              "ToolTip": "C:\\Users\\lthom\\source\\repos\\TitanHelp\\TitanHelp\\Controllers\\TicketControllerWithViews.cs",
+              "RelativeToolTip": "TitanHelp\\Controllers\\TicketControllerWithViews.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwCQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T16:08:36.175Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

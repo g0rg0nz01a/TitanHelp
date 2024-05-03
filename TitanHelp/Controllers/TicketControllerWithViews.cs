@@ -19,10 +19,21 @@ namespace TitanHelp.Controllers
             _context = context;
         }
 
+        //Author: Luke Kelley
         // GET: TicketControllerWithViews
-        public async Task<IActionResult> Index()
+        // This code adds page numbers to the bottom of the webpage when a certain amount of
+        // ticket entries have been reached.
+        public async Task<IActionResult> Index(int? pageNumber, int pageSize = 7)
         {
-            return View(await _context.Ticket.ToListAsync());
+            IQueryable<Ticket> tickets = _context.Ticket.AsQueryable();
+            var totalItems = await tickets.CountAsync();
+
+            var paginatedTickets = await tickets
+                .Skip((pageNumber - 1) * pageSize ?? 0)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return View(new PaginatedList<Ticket>(paginatedTickets, totalItems, pageNumber ?? 1, pageSize));
         }
 
         // GET: TicketControllerWithViews/Details/5
