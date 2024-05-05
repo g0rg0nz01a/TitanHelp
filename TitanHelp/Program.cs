@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 using TitanHelp.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TitanHelpContext>(options =>
@@ -28,6 +29,9 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=TicketControllerWithViews}/{action=Index}/{id?}");
-    //pattern: "{controller=Home}/{action=Index}/{id?}");
+//SWilson: Changes to make page open with Support tab containing empty table and Create New Ticket button
+//pattern: "{controller=Home}/{action=Support}/{id?}");
+
+//pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
