@@ -7,11 +7,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+<h1 class="display-4"><br>Welcome to The Titan Help Desk Interface </h1>
+<br>
+<h2>Initially Displaying Empty Tickets</h2><br/>
+
+
+
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -72,3 +77,15 @@
         <a href="?pageNumber=@paginatedList.NextPageNumber">Next</a>
     }
 }
+
+<br>
+<h3> Coming soon! Create Ticket Button and Help Desk Form</h3><br/>
+@*Changed above welcome intro and added breaks <br> <h2> and <h3> format to instructions for fun
+            
+        Inserted the GitHub Repository link in the footer.*@
+<button class="btn-outline-primary">
+    <a asp-action="Create">Create New</a>
+</button>
+
+
+<footer>TitanHelpApplicationCollaboration <a href="https://github.com/g0rg0nz01a/TitanHelp.git">&copy; 2024 LNS, Collaborations</a>.</footer>

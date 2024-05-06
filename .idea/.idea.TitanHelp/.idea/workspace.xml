@@ -9,17 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da179db3-826e-4c66-91bc-1c0005c1f068" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/TitanHelp/xs/UserPrefs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/TitanHelp/xs/project-cache/TitanHelp-Debug.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TitanHelp/TitanHelp.csproj.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TitanHelp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TitanHelp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitanHelp/TitanHelp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TitanHelp/TitanHelp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitanHelp/TitanHelpContext-25a6e241-d8c4-4d13-bfd8-29a45f93cdd5.db" beforeDir="false" afterPath="$PROJECT_DIR$/TitanHelp/TitanHelpContext-25a6e241-d8c4-4d13-bfd8-29a45f93cdd5.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitanHelp/TitanHelpContext-25a6e241-d8c4-4d13-bfd8-29a45f93cdd5.db-shm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitanHelp/TitanHelpContext-25a6e241-d8c4-4d13-bfd8-29a45f93cdd5.db-wal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitanHelp/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/TitanHelp/Views/Home/Index.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="da179db3-826e-4c66-91bc-1c0005c1f068" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,12 +27,12 @@
     &quot;assignee&quot;: &quot;Lukester616&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/g0rg0nz01a/TitanHelp.git&quot;,
-    &quot;accountId&quot;: &quot;28ee8186-eab2-413e-9368-545f1fabbfa1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/g0rg0nz01a/TitanHelp.git",
+    "accountId": "b20d5164-e08a-4bc3-9917-d5f2990c4a2a"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/lthom/source/repos/TitanHelp/TitanHelp/Views/TicketControllerWithViews/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
@@ -74,9 +64,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\lthom\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\lthom\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\lthom\\AppData\\Local\\Symbols\\src"
+      "/Users/nicholasfaz/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/nicholasfaz/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/nicholasfaz/Library/Application Support/Symbols/src"
     ]
   }
 }]]></component>
@@ -136,6 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714754755759</updated>
       <workItem from="1714754757971" duration="130000" />
+      <workItem from="1714949846583" duration="458000" />
     </task>
     <servers />
   </component>

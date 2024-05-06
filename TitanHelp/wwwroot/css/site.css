@@ -13,10 +13,20 @@ html {
 }
 
 html {
+  background-color: firebrick;
   position: relative;
   min-height: 100%;
 }
 
 body {
+  background-color: powderblue;
   margin-bottom: 60px;
+}
+
+ul {
+  background-color: darkslategray;
+}
+
+.navbar-brand {
+  background-color: pink;
 }
