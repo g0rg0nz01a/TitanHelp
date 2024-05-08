@@ -5,60 +5,72 @@
     <projectFile profileName="http">TitanHelp/TitanHelp.csproj</projectFile>
     <projectFile profileName="https">TitanHelp/TitanHelp.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="da179db3-826e-4c66-91bc-1c0005c1f068" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/TitanHelp/Controllers/TicketControllerWithViews.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TitanHelp/Controllers/TicketControllerWithViews.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitanHelp/Views/TicketControllerWithViews/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/TitanHelp/Views/TicketControllerWithViews/Index.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="da179db3-826e-4c66-91bc-1c0005c1f068" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Lukester616"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lukester616&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/g0rg0nz01a/TitanHelp.git",
-    "accountId": "28ee8186-eab2-413e-9368-545f1fabbfa1"
+    "accountId": "b20d5164-e08a-4bc3-9917-d5f2990c4a2a"
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/lthom/source/repos/TitanHelp/TitanHelp/Views/TicketControllerWithViews/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2fxtrYhDz4nPQSKxBmDnb3FIjUn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.TitanHelp: IIS Express.executor": "Run",
+    ".NET Launch Settings Profile.TitanHelp: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\lthom\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\lthom\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\lthom\\AppData\\Local\\Symbols\\src"
+      "/Users/nicholasfaz/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/nicholasfaz/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/nicholasfaz/Library/Application Support/Symbols/src"
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.TitanHelp: IIS Express">
+  <component name="RunManager" selected=".NET Launch Settings Profile.TitanHelp: http">
     <configuration name="TitanHelp: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TitanHelp/TitanHelp.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -114,6 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714754755759</updated>
       <workItem from="1714754757971" duration="130000" />
+      <workItem from="1714949846583" duration="458000" />
     </task>
     <servers />
   </component>
