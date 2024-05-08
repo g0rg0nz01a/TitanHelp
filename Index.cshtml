@@ -1,0 +1,108 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using TitanHelp.Controllers
+@model IEnumerable<TitanHelp.Models.Ticket>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="welcome">
+	<div class="container text-center">
+		<h1 class="disply-4"> Titan Help Desk</h1>
+		<h2 class="lead text-muted"> Welcome to the Titan Help Desk.</h2>
+
+</section>
+
+@* <h1 class="display-4"><br>Welcome to The Titan Help Desk Interface </h1>
+<br>
+<h2>Initially Displaying Empty Tickets</h2><br/> *@
+
+
+	</div>
+
+<section class="emptytable">
+	<div class="container">
+	<h3>Support Ticket List</h3>
+
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>
+						@Html.DisplayNameFor(model => model.Name)
+			</th>
+			<th>
+						@Html.DisplayNameFor(model => model.Title)
+			</th>
+			<th>
+						@Html.DisplayNameFor(model => model.Date)
+			</th>
+			<th>
+						@Html.DisplayNameFor(model => model.Description)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+				@foreach (var item in Model)
+				{
+				<tr>
+					<td>
+							@Html.DisplayFor(modelItem => item.Name)
+					</td>
+					<td>
+							@Html.DisplayFor(modelItem => item.Title)
+					</td>
+					<td>
+							@Html.DisplayFor(modelItem => item.Date)
+					</td>
+					<td>
+							@Html.DisplayFor(modelItem => item.Description)
+					</td>
+					<td>
+						   <button><a asp-action="Edit" asp-route-id="@item.ID">Edit</a></button> |
+						   <button><a asp-action="Details" asp-route-id="@item.ID">Details</a></button> | 
+							<button><a asp-action="Delete" asp-route-id="@item.ID">Delete</a></button>
+					</td>
+				</tr>
+				}
+	</tbody>
+</table>
+</div>
+</section>
+
+<!-- author: Luke Kelley -->
+@if (Model is PaginatedList<Ticket> paginatedList)
+{
+	@if (paginatedList.HasPreviousPage)
+	{
+				<a href="?pageNumber=@paginatedList.PreviousPageNumber">Previous</a>
+	}
+
+	@for (int i = 1; i <= paginatedList.TotalPages; i++)
+	{
+				<a href="?pageNumber=@i">@i</a>
+	}
+
+	@if (paginatedList.HasNextPage)
+	{
+				<a href="?pageNumber=@paginatedList.NextPageNumber">Next</a>
+	}
+}
+
+
+@* <br>
+<h3> Coming soon! Create Ticket Button and Help Desk Form</h3><br/> *@
+@*Changed above welcome intro and added breaks <br> <h2> and <h3> format to instructions for fun
+
+        Inserted the GitHub Repository link in the footer.*@
+@* <button class="btn-primary">
+    <a asp-action="Create">Create New</a>
+</button> *@
+
+@* <div class="githubfooter">
+<footer>TitanHelpApplicationCollaboration <a href="https://github.com/g0rg0nz01a/TitanHelp.git">&copy; 2024 LNS, Collaborations</a>.</footer>
+</div> *@
+
+@* <footer>TitanHelpApplicationCollaboration <a href="https://github.com/g0rg0nz01a/TitanHelp.git">&copy; 2024 LNS, Collaborations</a>.</footer> *@

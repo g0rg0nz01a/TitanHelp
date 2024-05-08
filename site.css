@@ -1,0 +1,127 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+/* Space between footer and table*/
+/*html {
+    background-color: black;
+    position: relative;
+    min-height: 100%;
+
+}*/
+
+body {
+    background-color: black;
+}
+
+/* Home Create Logs container*/
+ul {
+    background-color: ghostwhite;
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+
+}
+
+/*Titan Help */
+.navbar-brand {
+    background-color: dodgerblue;
+    background-size:auto;
+    font-family: monospace;
+    padding:.25rem;
+    font-weight: bolder;
+
+
+}
+
+.nav-link {
+    font-family: monospace;
+    text-decoration:none;
+}
+
+
+/* Website content*/
+.container {
+    color: white;
+    background-color: silver;
+}
+form {
+    background-color: black;
+}
+
+
+
+/*nav bar link background control*/
+.container-fluid {
+    
+}
+
+h1 {
+    color: white;
+    font-family: monospace;
+}
+
+h2 {
+    color:white;
+    font-weight:bolder;
+}
+/*Table header container*/
+h3{
+    font-family: monospace;
+    font-weight:bolder;
+    background-color:black;
+}
+
+section {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    
+}
+
+/*table{
+    font-size: 20px;
+    background-color:snow;
+
+    
+}*/
+
+/*br {
+    padding: 4px;
+
+}*/
+
+.table-bordered {
+    border-width:thick;
+    border-color:black;
+    background-color:snow;
+}
+
+/*thead {
+    font-size:larger;
+
+}*/
+
+.btn-link{
+    text-decoration: none;
+}
+
+.btn {
+    text-decoration: none;
+    color: black;
+}
+
+.border-top footer text-muted {
+    background-color: black;
+
+}
