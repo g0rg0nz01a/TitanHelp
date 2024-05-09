@@ -37,11 +37,21 @@
         </dd>
     </dl>
 </div>
-@*Added Button *@
-<div>
+@* //v1.1 updated buttons without href link attrib*@
+
+<div class="btn-edit">
+    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model?.ID">Edit</a>
+</div>
+
+<div class="back-to-list-btn">
+    <a class="btn btn-secondary" asp-controller="TicketControllerWithViews" asp-action="Index">Back to List</a>
+</div>
+
+@*Added bs Button *@
+@* <div>
     <button type="button" class="btn btn-success"><a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a></button>
     <button type="button" class="btn btn-secondary"><a asp-action="Index">Back to List</a><button
-</div>
+</div> *@
 
 
 @* <div>

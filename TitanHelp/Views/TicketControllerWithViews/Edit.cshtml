@@ -46,8 +46,16 @@
 </div>
  *@
 @* //Added button to link *@
-<div class="Back">
+@* <div class="Back">
     <button type="button" class="btn btn-secondary"><a asp-action="Index">Back to List</a></button>
+</div> *@
+
+@* // v1.1 return to index back button without href link attr
+    Test = Good
+    ****New button control to return to table.
+*@
+<div class="back-to-list">
+    <a class="btn btn-secondary" asp-controller="TicketControllerWithViews" asp-action="Index">Back to List</a>
 </div>
 
 

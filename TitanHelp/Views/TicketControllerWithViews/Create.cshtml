@@ -46,7 +46,12 @@
 </div>
 
 @* // Changes to back to list button *@
-<button type="button" class="btn btn-secondary"><a asp-action="Index">Back to List</a></button>
+@* <button type="button" class="btn btn-secondary"><a asp-action="Index">Back to List</a></button> *@
+
+@* v1.1 back btn without link href bs*@
+<div class="back-to-list-btn">
+    <a class="btn btn-secondary" asp-controller="TicketControllerWithViews" asp-action="Index">Back to List</a>
+</div>
 
 
 @* <div>

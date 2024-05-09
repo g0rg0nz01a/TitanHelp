@@ -3,27 +3,34 @@
 @model IEnumerable<TitanHelp.Models.Ticket>
 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @* <h1>Help Desk Tickets</h1> *@
 
+@* //v1.1 Changes to Create Ticket button with link style*@
 <div>
-    <button type="button" class="btn btn-lg btn-warning"><a asp-action="Create">Create New Ticket</a></button>
-    @* <button class="btn btn-lg btn-primary" type="button"><a asp-action="Create">Create New</a></button> *@
+<a class="btn btn-lg btn-primary" asp-controller="TicketControllerWithViews" asp-action="Create">Create Help Ticket</a>
+<br
+	/>
 </div>
 
+@* <div>
+    <button type="button" class="btn btn-lg btn-warning"><a asp-action="Create">Create New Ticket</a></button>
+    @* <button class="btn btn-lg btn-primary" type="button"><a asp-action="Create">Create New</a></button> *@
+@* </div> *@ 
+
 <br
-    />
+	/>
 
 @*//Welcome Container with information*@
 
 <div class="jumbotron jumbotron-fluid bg-secondary">
   <div class="container text-center">
-    <h1 class="display-4">Welcome to Titan Help Desk</h1>
-    <p class="lead">@* This is a modified jumbotron that occupies the entire horizontal space of its parent. *@
-        Select the Create New button for further assistance.</p>
+	<h1 class="display-4">Welcome to Titan Help Desk</h1>
+	<p class="lead">@* This is a modified jumbotron that occupies the entire horizontal space of its parent. *@
+		Select the Create New button for further assistance.</p>
   </div>
 </div>
 @* <div> *@
@@ -42,57 +49,73 @@
 </div> *@
 
 
-<div class="container bg-white">
-    @* // Added table hover and active selction to table rows.*@
+<div class="container bg-light">
+	@* // v.1 Added table hover and active selction to table rows.*@
 <h5>Help Desk Tickets</h5>
 <table class="table table-hover">
 
-    <thead>
-        <tr>
-            <th scope="col">
-                    @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th scope="col">
-                    @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th scope="col">
-                    @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th scope="col">
-                    @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-            @foreach (var item in Model)
-            {
-            <tr class="table-active">
-                <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                        @Html.DisplayFor(modelItem => item.Date)
-                </td>
-                <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                        @* // Updated Table button types *@
-                    <button type="button" class="btn btn-success"><a asp-action="Edit" asp-route-id="@item.ID">Edit</a></button> |
-                    <button type="button" class="btn btn-info"><a asp-action="Details" asp-route-id="@item.ID">Details</a></button> |
-                    <button type="button" class="btn btn-danger"><a asp-action="Delete" asp-route-id="@item.ID">Delete</a></button>
-                </td>
-            </tr>
-            }
-    </tbody>
+	<thead>
+		<tr>
+			<th scope="col">
+					@Html.DisplayNameFor(model => model.Name)
+			</th>
+			<th scope="col">
+					@Html.DisplayNameFor(model => model.Title)
+			</th>
+			<th scope="col">
+					@Html.DisplayNameFor(model => model.Date)
+			</th>
+			<th scope="col">
+					@Html.DisplayNameFor(model => model.Description)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+			@foreach (var item in Model)
+			{
+				<tr class="table-active">
+					<td>
+						@Html.DisplayFor(modelItem => item.Name)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Title)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Date)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Description)
+					</td>
+					<td>
+
+					@*// v1.1 btn update to edit details and delete without href link ref attr*@
+
+					@* <div class="btn-edit"> *@
+						<a class="btn btn-success" asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+					@* </div> *@
+
+				@* 	<div class="btn-details"> *@
+						<a class="btn btn-info" asp-action="Details" asp-route-id="@item.ID">Details</a> |
+					@* </div> *@
+						
+					@* <div class="btn-delete"> *@
+						<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+					@* </div> *@
+
+
+						@* // Updated Table button types *@
+@* 						<button type="button" class="btn btn-success"><a asp-action="Edit" asp-route-id="@item.ID">Edit</a></button> |
+						<button type="button" class="btn btn-info"><a asp-action="Details" asp-route-id="@item.ID">Details</a></button> |
+						<button type="button" class="btn btn-danger"><a asp-action="Delete" asp-route-id="@item.ID">Delete</a></button> *@
+					</td>
+				</tr>
+			}
+	</tbody>
 </table>
 <br
 
-    />
+	/>
 </div>
 
 
@@ -129,18 +152,18 @@
 <!-- author: Luke Kelley -->
 @if (Model is PaginatedList<Ticket> paginatedList)
 {
-    @if (paginatedList.HasPreviousPage)
-    {
-                <a href="?pageNumber=@paginatedList.PreviousPageNumber">Previous</a>
-    }
+	@if (paginatedList.HasPreviousPage)
+	{
+						<a href="?pageNumber=@paginatedList.PreviousPageNumber">Previous</a>
+	}
 
-    @for (int i = 1; i <= paginatedList.TotalPages; i++)
-    {
-                <a href="?pageNumber=@i">@i</a>
-    }
+	@for (int i = 1; i <= paginatedList.TotalPages; i++)
+	{
+						<a href="?pageNumber=@i">@i</a>
+	}
 
-    @if (paginatedList.HasNextPage)
-    {
-                <a href="?pageNumber=@paginatedList.NextPageNumber">Next</a>
-    }
+	@if (paginatedList.HasNextPage)
+	{
+						<a href="?pageNumber=@paginatedList.NextPageNumber">Next</a>
+	}
 }
