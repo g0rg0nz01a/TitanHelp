@@ -5,12 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+@*// v1.2 adding ticket name to details and setting page with br*@
+<br />
+<h3>Details for @Html.DisplayFor(model => model.Name)</h3>
+<br />
+<p>Ticket details are listed below.</p>
 
-<div>
-    <h4>Ticket</h4>
-    <hr />
-    <dl class="row">
+@* <div class="container-fluid"> *@
+  <br 
+      />
+    <h5></h5>
+    @* <hr /> *@
+    <br />
+    <dl class="row row-outline-info">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -36,13 +43,13 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
     </dl>
-</div>
-@* //v1.1 updated buttons without href link attrib*@
+@* </div> *@
 
+@* //v1.1 updated buttons without href link attrib*@
 <div class="btn-edit">
     <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model?.ID">Edit</a>
 </div>
-
+<br />
 <div class="back-to-list-btn">
     <a class="btn btn-secondary" asp-controller="TicketControllerWithViews" asp-action="Index">Back to List</a>
 </div>

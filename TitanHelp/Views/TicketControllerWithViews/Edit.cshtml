@@ -4,11 +4,15 @@
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Edit</h1>
-
-<h4>Ticket</h4>
-<hr />
+ @*// v1.2 changing format with br and changing defined headings.*@
+ <br />
+<h3>Editing @Html.DisplayFor(model => model.Name)</h3>
+<br />
+<p>Please make changes to Ticket and Save or select Back to List to return to Help Desk.</p>
+<br />
+@* <h5>Editing @Html.DisplayFor(model => model.Name)</h5> *@
+@* <hr /> *@
+@* <br /> *@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -16,6 +20,8 @@
             <input type="hidden" asp-for="ID" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
+                @* // v1.2 testing space break*@
+                <br />
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
@@ -35,11 +41,13 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <br />
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+<br />
 
 @* <div>
     <a asp-action="Index">Back to List</a>

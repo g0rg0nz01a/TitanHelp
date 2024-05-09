@@ -5,12 +5,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+@* v1.2 size and space changes with current ticket @Name display.*@
+<h3>Deleting @Html.DisplayFor(model => model.Name)</h3>
+<br />
+<p><strong>ARE YOU SURE YOU WANT TO DELETE THIS?</strong></p>
+<br 
+    />
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Ticket</h4>
-    <hr />
+@* <div> *@
+    @* <h5>Deleting @Html.DisplayFor(model => model.Name)</h5> *@
+    <br />
+    @* <hr /> *@
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
@@ -37,17 +42,20 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
     </dl>
-    
+  
     <form asp-action="Delete">
         <input type="hidden" asp-for="ID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        @* <br /> *@
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
        @* // Back to List into a button change*@
-@* v1.1 button without link ref*@
-<div class="back-to-list-btn">
-    <a class="btn btn-secondary" asp-controller="TicketControllerWithViews" asp-action="Index">Back to List</a>
-</div>
-        @* <button type="button" class="btn btn-secondary"><a asp-action="Index">Back to List</a></button> *@
+       @* v1.1 button without link ref*@
 
+
+        @* <button type="button" class="btn btn-secondary"><a asp-action="Index">Back to List</a></button> *@
         @*  <a asp-action="Index">Back to List</a> *@
     </form>
+    <br />
+        <div class="back-to-list-btn">
+        <a class="btn btn-secondary" asp-controller="TicketControllerWithViews" asp-action="Index">Back to List</a>
+        </div>
 </div>

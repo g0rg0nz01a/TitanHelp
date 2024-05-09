@@ -7,13 +7,14 @@
 
 @* <h1>Create</h1> *@
 @* // Changes to heading size and added instruction*@
-<h2>Create</h2>
-<partial>Please fill out this form before submitting. </partial>
+<h3>Create New Ticket</h3>
+<br />
+<partial>Please fill out form before submitting. </partial>
+<br />
 
-
-
-<h4>Ticket</h4>
-<hr />
+@* 
+<h6>Ticket</h6> *@
+@* <hr /> *@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -39,12 +40,13 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <br />
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 @* // Changes to back to list button *@
 @* <button type="button" class="btn btn-secondary"><a asp-action="Index">Back to List</a></button> *@
 
