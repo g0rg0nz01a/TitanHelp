@@ -3,106 +3,132 @@
 @model IEnumerable<TitanHelp.Models.Ticket>
 
 @{
-	ViewData["Title"] = "Index";
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<section class="welcome">
-	<div class="container text-center">
-		<h1 class="disply-4"> Titan Help Desk</h1>
-		<h2 class="lead text-muted"> Welcome to the Titan Help Desk.</h2>
+@* <h1>Help Desk Tickets</h1> *@
 
-</section>
+<div>
+    <button type="button" class="btn btn-lg btn-warning"><a asp-action="Create">Create New Ticket</a></button>
+    @* <button class="btn btn-lg btn-primary" type="button"><a asp-action="Create">Create New</a></button> *@
+</div>
 
-@* <h1 class="display-4"><br>Welcome to The Titan Help Desk Interface </h1>
-<br>
-<h2>Initially Displaying Empty Tickets</h2><br/> *@
+<br
+    />
+
+@*//Welcome Container with information*@
+<div>
+<partial class="text-center"><h1>Welcome to Titan Help Desk</h1>
+<h5> Select the Create New button for further assistance.</h5></partial>
+@* <p><small>This line of text is meant to be treated as fine print.</small></p>
+<p>The following is <strong>rendered as bold text</strong>.</p>
+<p>The following is <em>rendered as italicized text</em>.</p>
+<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p> *@
+
+@* removed br*@
+<br 
+    
+
+    />
+</div>
 
 
-	</div>
-
-<section class="emptytable">
-	<div class="container">
-	<h3>Support Ticket List</h3>
-
-
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>
-						@Html.DisplayNameFor(model => model.Name)
-			</th>
-			<th>
-						@Html.DisplayNameFor(model => model.Title)
-			</th>
-			<th>
-						@Html.DisplayNameFor(model => model.Date)
-			</th>
-			<th>
-						@Html.DisplayNameFor(model => model.Description)
-			</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-				@foreach (var item in Model)
-				{
-				<tr>
-					<td>
-							@Html.DisplayFor(modelItem => item.Name)
-					</td>
-					<td>
-							@Html.DisplayFor(modelItem => item.Title)
-					</td>
-					<td>
-							@Html.DisplayFor(modelItem => item.Date)
-					</td>
-					<td>
-							@Html.DisplayFor(modelItem => item.Description)
-					</td>
-					<td>
-						   <button><a asp-action="Edit" asp-route-id="@item.ID">Edit</a></button> |
-						   <button><a asp-action="Details" asp-route-id="@item.ID">Details</a></button> | 
-							<button><a asp-action="Delete" asp-route-id="@item.ID">Delete</a></button>
-					</td>
-				</tr>
-				}
-	</tbody>
+<div class="container">
+@* // Added table hover and active selction to table rows.*@
+<h5>Help Desk Tickets</h5>
+<table class="table table-hover">
+   
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="table-active">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @* // Updated Table button types *@
+                <button type="button" class="btn btn-success"><a asp-action="Edit" asp-route-id="@item.ID">Edit</a></button> |
+                <button type="button" class="btn btn-info"><a asp-action="Details" asp-route-id="@item.ID">Details</a></button> |
+                <button type="button" class="btn btn-danger"><a asp-action="Delete" asp-route-id="@item.ID">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
 </table>
 </div>
-</section>
+
+
+@* Need to add to page index
+    Source Code
+
+<div>
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&laquo;</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">5</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">&raquo;</a>
+    </li>
+  </ul>
+</div>
+*@
 
 <!-- author: Luke Kelley -->
 @if (Model is PaginatedList<Ticket> paginatedList)
 {
-	@if (paginatedList.HasPreviousPage)
-	{
-				<a href="?pageNumber=@paginatedList.PreviousPageNumber">Previous</a>
-	}
+    @if (paginatedList.HasPreviousPage)
+    {
+        <a href="?pageNumber=@paginatedList.PreviousPageNumber">Previous</a>
+    }
 
-	@for (int i = 1; i <= paginatedList.TotalPages; i++)
-	{
-				<a href="?pageNumber=@i">@i</a>
-	}
+    @for (int i = 1; i <= paginatedList.TotalPages; i++)
+    {
+        <a href="?pageNumber=@i">@i</a>
+    }
 
-	@if (paginatedList.HasNextPage)
-	{
-				<a href="?pageNumber=@paginatedList.NextPageNumber">Next</a>
-	}
+    @if (paginatedList.HasNextPage)
+    {
+        <a href="?pageNumber=@paginatedList.NextPageNumber">Next</a>
+    }
 }
-
-
-@* <br>
-<h3> Coming soon! Create Ticket Button and Help Desk Form</h3><br/> *@
-@*Changed above welcome intro and added breaks <br> <h2> and <h3> format to instructions for fun
-
-        Inserted the GitHub Repository link in the footer.*@
-@* <button class="btn-primary">
-    <a asp-action="Create">Create New</a>
-</button> *@
-
-@* <div class="githubfooter">
-<footer>TitanHelpApplicationCollaboration <a href="https://github.com/g0rg0nz01a/TitanHelp.git">&copy; 2024 LNS, Collaborations</a>.</footer>
-</div> *@
-
-@* <footer>TitanHelpApplicationCollaboration <a href="https://github.com/g0rg0nz01a/TitanHelp.git">&copy; 2024 LNS, Collaborations</a>.</footer> *@
